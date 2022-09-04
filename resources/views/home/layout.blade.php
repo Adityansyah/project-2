@@ -12,7 +12,8 @@
     <link href="template/assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
 </head>
 
-<body>
+<body class="loading"
+    data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
     @yield('content')
 </body>
 <script src="template/assets/js/vendor.min.js"></script>
