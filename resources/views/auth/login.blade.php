@@ -24,7 +24,6 @@
             <div class="row justify-content-center">
                 <div class="col-xxl-4 col-lg-5">
                     <div class="card">
-
                         <!-- Logo -->
                         <div class="card-header pt-4 pb-4 text-center bg-primary">
                             <a href="index.html">
@@ -69,7 +68,8 @@
                                 </div>
 
                                 <div class="mb-3 mb-0 text-center">
-                                    <button class="btn btn-primary" type="submit"> Log In </button>
+                                    <a href="{{ route('dashboard') }}" class="btn btn-primary" type="submit"> Log In
+                                    </a>
                                 </div>
 
                             </form>

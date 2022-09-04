@@ -13,8 +13,9 @@
 </head>
 
 <body>
-
-
+    @yield('content')
 </body>
+<script src="template/assets/js/vendor.min.js"></script>
+<script src="template/assets/js/app.min.js"></script>
 
 </html>
