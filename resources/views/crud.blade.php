@@ -37,18 +37,22 @@
                         <table class="table table-bordered mt-1">
                             <thead>
                                 <tr>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Create At</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Nim</th>
+                                    <th scope="col">Kategori</th>
+                                    <th scope="col">Dibuat Tanggal</th>
+                                    <th scope="col">Keterangan</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @forelse ($posts as $post)
                                 <tr>
-                                    <td>{{ $post->title }}</td>
-                                    <td>{{ $post->status == 0 ? 'Draft':'Publish' }}</td>
+                                    <td>{{ $post->Nama }}</td>
+                                    <td>{{ $post->Nim }}</td>
+                                    <td>{{ $post->Kategori == 0 ? 'Saintek':'Soshum' }}</td>
                                     <td>{{ $post->created_at->format('d-m-Y') }}</td>
+                                    <td>{{ $post->Keterangan }}</td>
                                     <td class="text-center">
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');"
                                             action="{{ route('post.destroy', $post->id) }}" method="POST">

@@ -38,28 +38,39 @@
                             @csrf
 
                             <div class="form-group">
-                                <label for="title">Title</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror"
-                                    name="title" value="{{ old('title') }}" required>
+                                <label for="title">Nama</label>
+                                <input type="text" class="form-control @error('Nama') is-invalid @enderror"
+                                    name="title" value="{{ old('Nama') }}" required>
 
                                 <!-- error message untuk title -->
-                                @error('title')
-                                <div class="invalid-feedback">
+                                @error('Nama')
+                                <div class="invalid-fe  edback">
                                     {{ $message }}
                                 </div>
                                 @enderror
                             </div>
-
                             <div class="form-group">
-                                <label for="status">Publish Status</label>
+                                <label for="title">Nim</label>
+                                <input type="text" class="form-control @error('Nim') is-invalid @enderror"
+                                    name="Nim" value="{{ old('Nim') }}" required>
+
+                                <!-- error message untuk title -->
+                                @error('Nim')
+                                <div class="invalid-fe  edback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="status">Kategori</label>
                                 <select name="status" class="form-control" required>
-                                    <option value="1" selected>Publish</option>
-                                    <option value="0">Draft</option>
+                                    <option value="1" selected>Saintek</option>
+                                    <option value="0">Soshum</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <label for="content">Content</label>
+                                <label for="content">Keterangan </label>
                                 <textarea
                                     name="content" id="content"
                                     class="form-control @error('content') is-invalid @enderror"
@@ -83,7 +94,7 @@
             </div>
         </div>
     </div>
-
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">

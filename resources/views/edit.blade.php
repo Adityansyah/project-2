@@ -38,9 +38,9 @@
                             @method('PUT')
 
                             <div class="form-group">
-                                <label for="title">Title</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror"
-                                    name="title" value="{{ old('title', $post->title) }}" required>
+                                <label for="title">Nama</label>
+                                <input type="text" class="form-control @error('Nama') is-invalid @enderror"
+                                    name="title" value="{{ old('title', $post->Nama) }}" required>
 
                                 <!-- error message untuk title -->
                                 @error('title')
@@ -49,17 +49,21 @@
                                 </div>
                                 @enderror
                             </div>
+                            <div class="form-group">
+                                <label for="title">Nim</label>
+                                <input type="text" class="form-control @error('title') is-invalid @enderror"
+                                    name="title" value="{{ old('title') }}" required>
 
                             <div class="form-group">
-                                <label for="status">Publish Status</label>
+                                <label for="status">Kategori</label>
                                 <select name="status" class="form-control" required>
-                                    <option value="1" {{ $post->status == 1 ? 'selected':'' }}>Publish</option>
-                                    <option value="0" {{ $post->status == 0 ? 'selected':'' }}>Draft</option>
+                                    <option value="1" {{ $post->status == 1 ? 'selected':'' }}>Soshum</option>
+                                    <option value="0" {{ $post->status == 0 ? 'selected':'' }}>Saintek</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <label for="content">Content</label>
+                                <label for="content">Keterangan</label>
                                 <textarea
                                     name="content" id="content"
                                     class="form-control @error('content') is-invalid @enderror" name="content" id="content"
@@ -97,5 +101,4 @@
         })
     </script>
 </body>
-
 </html>
