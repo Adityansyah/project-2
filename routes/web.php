@@ -14,5 +14,18 @@ Route::delete('destroy/{id}', [CRUDController::class, "destroy"])->name("post.de
 Route::get('edit/{id}', [CRUDController::class, "edit"])->name("post.edit");
 Route::put('update/{id}', [CRUDController::class, "update"])->name("post.update");
 
+
+
 Route::view('dashboard', 'home.dashboard')->name("dashboard");
-Route::view('login', 'auth.login')->name("login");
+
+Route::group(
+    [
+        'middleware' => 'web',
+        'prefix' => 'auth',
+        'as' => 'auth.'
+    ],
+    function () {
+        Route::view('login', 'auth/login')->name("login");
+        Route::view('register', 'auth/register')->name("register");
+    }
+);
