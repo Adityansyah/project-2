@@ -52,14 +52,14 @@
             <li class="side-nav-title side-nav-item">Menu</li>
 
             <li class="side-nav-item">
-                <a href="" class="side-nav-link">
+                <a href="#" class="side-nav-link">
                     <i class="uil-calender"></i>
-                    <span>To-do </span>
+                    <span> To-do </span>
                 </a>
             </li>
 
             <li class="side-nav-item">
-                <a href="" class="side-nav-link">
+                <a href="#" class="side-nav-link">
                     <i class="uil-comments-alt"></i>
                     <span> Create New</span>
                 </a>
