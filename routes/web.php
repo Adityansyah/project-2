@@ -16,7 +16,7 @@ Route::put('update/{id}', [CRUDController::class, "update"])->name("post.update"
 
 
 
-Route::view('dashboard', 'home.dashboard')->name("dashboard");
+Route::view('dashboard', 'home.apps.dashboard')->name("dashboard");
 
 Route::group(
     [
