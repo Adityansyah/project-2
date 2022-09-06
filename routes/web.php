@@ -4,8 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CRUDController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('home.dashboard');
 });
+
 Route::get('crud', [CRUDController::class, "index"])->name("post.index");
 Route::post('crud', [CRUDController::class, "post"])->name("post.store");
 Route::get('create', [CRUDController::class, "create"]);

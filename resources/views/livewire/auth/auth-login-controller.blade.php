@@ -1,20 +1,31 @@
 <div>
-    <form action="#">
+    <form wire:submit.prevent="login()" id="">
         <div class="mb-3">
-            <label for="emailaddress" class="form-label">Email address</label>
-            <input class="form-control" type="email" id="emailaddress" required="" placeholder="Enter your email">
+            <label for="login_id" class="form-label">Email or username</label>
+            <input class="form-control" type="text" id="login_id" wire:model="login_id" placeholder="Enter your email">
+            <span class="text-danger">
+                @error('login_id')
+                    {{ $message }}
+                @enderror
+            </span>
         </div>
 
         <div class="mb-3">
-            <a href="pages-recoverpw.html" class="text-muted float-end"><small>Forgot your
-                    password?</small></a>
+            <a href="#" class="text-muted float-end">
+                <small>Forgot your password?</small></a>
             <label for="password" class="form-label">Password</label>
             <div class="input-group input-group-merge">
-                <input type="password" id="password" class="form-control" placeholder="Enter your password">
+                <input type="password" id="password" wire:model="password" class="form-control"
+                    placeholder="Enter your password">
                 <div class="input-group-text" data-password="false">
                     <span class="password-eye"></span>
                 </div>
             </div>
+            <span class="text-danger">
+                @error('password')
+                    {{ $message }}
+                @enderror
+            </span>
         </div>
 
         <div class="mb-3 mb-3">
@@ -25,8 +36,7 @@
         </div>
 
         <div class="mb-3 mb-0 text-center">
-            <a href="{{ route('home.dashboard') }}" class="btn btn-primary" type="submit"> Log In
-            </a>
+            <button class="btn btn-primary" type="submit"> Log In</button>
         </div>
 
     </form>

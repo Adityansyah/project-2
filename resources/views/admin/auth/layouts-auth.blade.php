@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <!-- App css -->
     @include('styles.template-styles')
+    @livewireStyles
 
 </head>
 
@@ -25,7 +26,7 @@
     </footer>
 
     @include('styles.template-scripts')
-
+    @livewireScripts
 </body>
 
 </html>
