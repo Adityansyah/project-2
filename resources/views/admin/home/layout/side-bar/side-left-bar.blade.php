@@ -22,7 +22,7 @@
     <div class="h-100" id="leftside-menu-container" data-simplebar="">
         <!--- Sidemenu -->
         <ul class="side-nav">
-            <li class="side-nav-title side-nav-item">Navigation</li>
+            <li class="side-nav-title side-nav-item">Home</li>
 
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarDashboards" aria-expanded="false"
@@ -49,19 +49,19 @@
                 </div>
             </li>
 
-            <li class="side-nav-title side-nav-item">Apps</li>
+            <li class="side-nav-title side-nav-item">Menu</li>
 
             <li class="side-nav-item">
-                <a href="apps-calendar.html" class="side-nav-link">
+                <a href="" class="side-nav-link">
                     <i class="uil-calender"></i>
-                    <span> Calendar </span>
+                    <span>To-do </span>
                 </a>
             </li>
 
             <li class="side-nav-item">
-                <a href="apps-chat.html" class="side-nav-link">
+                <a href="" class="side-nav-link">
                     <i class="uil-comments-alt"></i>
-                    <span> Chat </span>
+                    <span> Create New</span>
                 </a>
             </li>
 
