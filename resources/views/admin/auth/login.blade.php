@@ -1,4 +1,4 @@
-@extends('auth.layouts-auth')
+@extends('admin.auth.layouts-auth')
 @section('title', 'Login')
 @section('content')
     <div class="row justify-content-center">
@@ -18,7 +18,7 @@
                         <p class="text-muted mb-4">Enter your email address and password to access admin panel.
                         </p>
                     </div>
-                    @livewire('auth.auth-login-controller')
+                    @livewire('admin.auth.auth-login-controller')
                 </div>
                 <!-- end card-body -->
             </div>

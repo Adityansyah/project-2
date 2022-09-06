@@ -9,11 +9,8 @@
     <meta content="Coderthemes" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-
     <!-- App css -->
-    <link href="{{ asset('template/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('template/assets/css/app.min.css') }}" rel="stylesheet" type="text/css" id="light-style" />
-    <link href="{{ asset('template/assets/css/app-dark.min.css') }}" rel="stylesheet" type="text/css" id="dark-style" />
+    @include('styles.template-styles')
 
 </head>
 
@@ -27,8 +24,7 @@
     <footer class="footer footer-alt">
     </footer>
 
-    <script src="{{ asset('template/assets/js/vendor.min.js') }}"></script>
-    <script src="{{ asset('template/assets/js/app.min.js') }}"></script>
+    @include('styles.template-scripts')
 
 </body>
 

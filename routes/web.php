@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CRUDController;
-use App\Http\Controllers\Auth\AuthController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,10 +13,16 @@ Route::delete('destroy/{id}', [CRUDController::class, "destroy"])->name("post.de
 Route::get('edit/{id}', [CRUDController::class, "edit"])->name("post.edit");
 Route::put('update/{id}', [CRUDController::class, "update"])->name("post.update");
 
+// loged in
+Route::group([
+    // 'middleware' => 'auth',
+    'prefix' => 'h',
+    'as' => 'home.',
+], function () {
+    Route::view('dashboard', 'admin.home.apps.dashboard')->name('dashboard');
+});
 
-
-Route::view('dashboard', 'home.apps.dashboard')->name("dashboard");
-
+// not login yet
 Route::group(
     [
         'middleware' => 'web',
@@ -25,7 +30,7 @@ Route::group(
         'as' => 'auth.'
     ],
     function () {
-        Route::view('login', 'auth/login')->name("login");
-        Route::view('register', 'auth/register')->name("register");
+        Route::view('login', 'admin.auth/login')->name("login");
+        Route::view('register', 'admin.auth/register')->name("register");
     }
 );

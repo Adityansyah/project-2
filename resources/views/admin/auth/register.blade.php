@@ -1,4 +1,4 @@
-@extends('auth.layouts-auth')
+@extends('admin.auth.layouts-auth')
 @section('title', 'Register')
 @section('content')
     <div class="row justify-content-center">
@@ -17,7 +17,7 @@
                         <p class="text-muted mb-4">Don't have an account? Create your account, it takes less than a minute
                         </p>
                     </div>
-                    @livewire('auth.register-controller')
+                    @livewire('admin.auth.register-controller')
                 </div>
                 <!-- end card-body -->
             </div>

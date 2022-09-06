@@ -25,7 +25,7 @@
         </div>
 
         <div class="mb-3 mb-0 text-center">
-            <a href="{{ route('dashboard') }}" class="btn btn-primary" type="submit"> Log In
+            <a href="{{ route('home.dashboard') }}" class="btn btn-primary" type="submit"> Log In
             </a>
         </div>
 
