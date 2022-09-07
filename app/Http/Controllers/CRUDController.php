@@ -12,7 +12,7 @@ class CRUDController extends Controller
         ]);
 
     }  
-    public function post(Request $req)
+    public function post1(Request $req)
     {
         $this->validate($req, [
             'title' => 'required|string|max:155',
