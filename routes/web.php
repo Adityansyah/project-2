@@ -16,7 +16,7 @@ Route::put('update/{id}', [CRUDController::class, "update"])->name("post.update"
 
 // loged in
 Route::group([
-    // 'middleware' => 'auth',
+    'middleware' => 'auth',
     'prefix' => 'h',
     'as' => 'home.',
 ], function () {
