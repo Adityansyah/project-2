@@ -1,7 +1,6 @@
 @extends('admin.home.layout.layout')
 @section('title', 'Dashboard')
-@section('content')
-
+@section('page')
     <!-- Begin page -->
     <div class="wrapper">
         <!-- ========== Left Sidebar Start ========== -->
@@ -22,32 +21,39 @@
                 <div class="container-fluid">
 
                     <!-- start page title -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="page-title-box">
-                                <div class="page-title-right">
-                                    <form class="d-flex">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control form-control-light"
-                                                id="dash-daterange">
-                                            <span class="input-group-text bg-primary border-primary text-white">
-                                                <i class="mdi mdi-calendar-range font-13"></i>
-                                            </span>
-                                        </div>
-                                        <a href="javascript: void(0);" class="btn btn-primary ms-2">
-                                            <i class="mdi mdi-autorenew"></i>
-                                        </a>
-                                        <a href="javascript: void(0);" class="btn btn-primary ms-1">
-                                            <i class="mdi mdi-filter-variant"></i>
-                                        </a>
-                                    </form>
+                    @if (request()->is('h/dashboard'))
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <form class="d-flex">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control form-control-light"
+                                                    id="dash-daterange">
+                                                <span class="input-group-text bg-primary border-primary text-white">
+                                                    <i class="mdi mdi-calendar-range font-13"></i>
+                                                </span>
+                                            </div>
+                                            <a href="javascript: void(0);" class="btn btn-primary ms-2">
+                                                <i class="mdi mdi-autorenew"></i>
+                                            </a>
+                                            <a href="javascript: void(0);" class="btn btn-primary ms-1">
+                                                <i class="mdi mdi-filter-variant"></i>
+                                            </a>
+                                        </form>
+                                    </div>
+                                    <h4 class="page-title">Dashboard</h4>
                                 </div>
-                                <h4 class="page-title">Dashboard</h4>
                             </div>
                         </div>
-                    </div>
+                    @endif
+
+
                     <!-- end page title -->
-                    <div class="row"></div>
+
+                    <div class="row">
+                        @yield('content')
+                    </div>
                     <!-- end row -->
 
                     <div class="row"></div>

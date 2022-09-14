@@ -47,13 +47,8 @@ class AuthLoginController extends Component
             $checkUser = User::where($fieldType, $this->login_id)->first();
             if ($checkUser->blocked == 1) {
                 Auth::guard('web')->logout();
-                return redirect()->route('auth.login')->with('failed', 'your account had been deleted');
+                return redirect()->route('auth.login')->with('fail', 'your account had been deleted');
             } else {
-                return redirect()->route('home.dashboard');
-                // not invoked
-                if ($this->returnUrl != null) {
-                    return redirect()->to($this->returnUrl);
-                }
                 return to_route('home.dashboard');
             }
         } else {
